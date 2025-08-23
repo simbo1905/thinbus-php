@@ -11,14 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ['8.1', '8.2', '8.3']
-        include:
-          - php-version: '8.1'
-            phpunit-version: '10'
-          - php-version: '8.2'
-            phpunit-version: '11'
-          - php-version: '8.3'
-            phpunit-version: '11'
+        php-version: ['8.2', '8.3']
 
     name: PHP ${{ matrix.php-version }} Tests
 
@@ -31,7 +24,7 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
           extensions: bcmath, gmp, sqlite3, mbstring, curl, dom, xml
-          tools: phpunit:${{ matrix.phpunit-version }}, composer
+          tools: composer
           coverage: none
 
       - name: Show versions
@@ -39,7 +32,6 @@ jobs:
           php -v
           php -m
           composer -V
-          phpunit --version
 
       - name: Validate composer.json
         run: composer validate --strict
@@ -52,7 +44,7 @@ jobs:
       - name: Run tests
         run: |
           mkdir -p build/test-results
-          phpunit --configuration phpunit.xml.dist
+          ./vendor/bin/phpunit --configuration phpunit.xml.dist
           # Copy to matrix-specific filename for artifact upload
           if [ -f build/test-results/junit.xml ]; then
             cp build/test-results/junit.xml build/test-results/junit-php${{ matrix.php-version }}.xml
