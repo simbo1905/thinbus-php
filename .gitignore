@@ -11,3 +11,4 @@ phpinfo.php
 .vscode/
 issue8.txt
 vendor/
+litellm_config.yaml
