@@ -11,3 +11,14 @@ phpinfo.php
 .vscode/
 issue8.txt
 vendor/
+
+# PHPUnit cache and build artifacts
+.phpunit.cache/
+build/
+
+# Composer phar file (use global composer instead)
+composer.phar
+
+# OS files
+.DS_Store
+Thumbs.db
