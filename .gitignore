@@ -1,3 +1,4 @@
+litellm_config.yaml
 /deployment.properties
 /deployment.xml
 .buildpath
