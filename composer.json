@@ -3,14 +3,24 @@
     "type": "library",
     "description": "Thinbus SRP PHP is an implementation of the SRP-6a Secure Remote Password protocol.",
     "keywords": ["SRP","SRP6a","RFC 5054","RFC 2945","RFC5054","RFC2945","authentication","password","salt","zero-knowledge","proof-of-password"],
-    "homepage": "https://bitbucket.org/simon_massey/thinbus-php/",
+    "homepage": "https://github.com/simbo1905/thinbus-php",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Simon Massey",
             "email": "simbo1905@60hertz.com",
-            "homepage": "https://simbo1905.blog/category/SRP6a/",
+            "homepage": "https://simbo1905.wordpress.com/category/SRP6a/",
             "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/simbo1905/thinbus-php/issues",
+        "source": "https://github.com/simbo1905/thinbus-php"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/simbo1905/thinbus-php"
         }
     ],
     "autoload": {
