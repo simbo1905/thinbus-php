@@ -1,10 +1,8 @@
 # thinbus-php Development Guide
 
-This document follows the [AGENTS.md best practices](https://agents.md) for AI-assisted development of the thinbus-php project.
-
 ## Project Overview
 
-thinbus-php is a PHP implementation of the Secure Remote Password (SRP) protocol, providing secure authentication for web applications without transmitting passwords.
+thinbus-php is a PHP implementation of the Secure Remote Password (SRP) protocol, providing secure authentication for web applications without transmitting passwords. It uses the test vectors of RFC5054 to verify that the code matches the specifiation. 
 
 ## Development Setup
 
