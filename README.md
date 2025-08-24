@@ -54,10 +54,6 @@ You need to understand that:
 * Every users has a password verifier and a unique salt that you store in your database. This implementation uses the [RFC2945](https://www.ietf.org/rfc/rfc2945.txt) approach of hashing the username into the password verifier. This means that if your application lets a user change their username then they will be locked out unless you generate and store a fresh password verifier.  
 * At every login attempt the browser first makes an AJAX call to get a one-time random challenge and the user salt from the server. The browser then uses that to compute a one-time proof-of-password and then immediately posts the proof-of-password to the server. The server checks the proof-of-password for the one-time challenge using the information stored in the user database. This means the server has to hold the thinbus object that generated the challenge for a short period (either your favourite cache or in your main database). 
 
-The following diagram shows what you need to know: 
-
-![Thinbus SRP Login Diagram](https://camo.githubusercontent.com/d3f3723e01f53e402f7186d157dcefbc215a41f6/687474703a2f2f73696d6f6e6d61737365792e6269746275636b65742e696f2f7468696e6275732f6c6f67696e2d63616368652e706e67 "Thinbus SRP Login Diagram")
-
 It is expected that you create your own code for loading and saving data to a real database. Do not use my demo application's SQLLite or RedBean code. Only use the PHP files at `thinbus\*.php` folder of this repo. It is expected that you use your own code for handling authorisation of which pages users can or cannot access. Trying to modifying the demo files to support your application may be harder than just modifying your current application to simply use the core Thinbus library at `thinbus\*.php`. 
 
 Please read the recommendations in the main thinbus documentation and take additional steps such as using HTTPS and encrypting the password verifier in the database which are not shown in this demo. 
