@@ -13,3 +13,8 @@ phpinfo.php
 issue8.txt
 vendor/
 litellm_config.yaml
+.aider*
+
+.openhands/*
+
+openrouter/*
