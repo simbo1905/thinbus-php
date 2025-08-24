@@ -74,35 +74,10 @@ vendor/bin/phpunit --verbose ThinbusTest.php
 If all test pass should output a final line such as `OK (xx tests, yyy assertions)`. If not raise an issue with the verbose output of the phpunit command and the output of `phpinfo();` on your system. 
 
 If you find that the code runs slow in a server it is likely that the `pear/math_biginteger` library cannot find a native implimentation.  It uses the GMP or BCMath extensions, if available, and an internal implementation, otherwise. The fix is to install one of those extensions so that the very large number math is done at native speed rather than scripting speed. 
-
-### Big Thanks
-
-Cross-browser Testing Platform and Open Source <3 Provided by [Sauce Labs][homepage]
-
-Using Sauce Labs the demo app code [thinbus-php-srp-demo](https://packagist.org/packages/simon_massey/thinbus-php-srp-demo) has been tested to work on:
-
- * Android 6.0 
- * Android 5.1
- * Android 5.0
- * Android 4.4
- * iOS 11.0
- * iOS 8.1
- * Microsoft Edge 15
- * Microsoft Edge 13
- * Microsoft Explorer 11 (note all previous versions were end of life Jan 2016)
- * Chrome 63
- * Chrome 26
- * Firefox 57
- * Firefox 4 (released March 22, 2011!)
- * Safari 11 
- * Safari 7 
-
-[homepage]: https://saucelabs.com
-
 ## License
 
 ```
-   Copyright 2015-2017 Simon Massey
+   Copyright 2015-2025 Simon Massey
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
